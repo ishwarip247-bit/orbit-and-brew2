@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Mission Control — ORBIT & BREW</title>
+
+    <link rel="stylesheet" href="owner.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Orbitron:wght@400;500;600;700;800&display=swap"
+          rel="stylesheet">
+
+</head>
+
+<body class="dashboard-page">
+
+<div class="dashboard-bg"></div>
+
+<aside class="sidebar">
+
+    <div class="owner-logo">
+        ORBIT
+        <span>&</span>
+        BREW
+    </div>
+
+    <div class="control-label">
+        MISSION CONTROL
+    </div>
+
+    <nav>
+
+        <button class="side-link active">
+            ◉ <span>Command Center</span>
+        </button>
+
+        <button class="side-link">
+            ◌ <span>Orders</span>
+        </button>
+
+        <button class="side-link">
+            ✦ <span>Customers</span>
+        </button>
+
+        <button class="side-link">
+            ◇ <span>Menu</span>
+        </button>
+
+        <button class="side-link">
+            ☆ <span>Feedback</span>
+        </button>
+
+        <button class="side-link">
+            ∞ <span>Analytics</span>
+        </button>
+
+    </nav>
+
+    <div class="sidebar-bottom">
+
+        <a href="../index.html">
+            ← CUSTOMER SITE
+        </a>
+
+        <button id="logoutButton">
+            LOG OUT
+        </button>
+
+    </div>
+
+</aside>
+
+
+<main class="dashboard-main">
+
+    <header class="dashboard-header">
+
+        <div>
+
+            <span class="system-code">
+                ORB / 01 / LIVE
+            </span>
+
+            <h1>
+                COMMAND
+                <em>CENTER</em>
+            </h1>
+
+        </div>
+
+        <div class="live-status">
+            <i></i>
+            SYSTEM ONLINE
+        </div>
+
+    </header>
+
+
+    <!-- STATS -->
+
+    <section class="stats-grid">
+
+        <div class="stat-card">
+
+            <span>TODAY'S ORDERS</span>
+
+            <strong id="ordersToday">
+                0
+            </strong>
+
+            <small>
+                incoming transmissions
+            </small>
+
+            <div class="stat-orbit">◉</div>
+
+        </div>
+
+
+        <div class="stat-card">
+
+            <span>COSMIC REVENUE</span>
+
+            <strong>
+                ₹<b id="revenueToday">0</b>
+            </strong>
+
+            <small>
+                today's earnings
+            </small>
+
+            <div class="stat-orbit">₹</div>
+
+        </div>
+
+
+        <div class="stat-card">
+
+            <span>EXPLORERS</span>
+
+            <strong id="customersCount">
+                0
+            </strong>
+
+            <small>
+                registered customers
+            </small>
+
+            <div class="stat-orbit">✦</div>
+
+        </div>
+
+
+        <div class="stat-card">
+
+            <span>ORBIT RATING</span>
+
+            <strong>
+                4.9
+            </strong>
+
+            <small>
+                based on feedback
+            </small>
+
+            <div class="stat-orbit">★</div>
+
+        </div>
+
+    </section>
+
+
+    <!-- MAIN GRID -->
+
+    <section class="control-grid">
+
+
+        <!-- ORDERS -->
+
+        <div class="panel orders-panel">
+
+            <div class="panel-header">
+
+                <div>
+                    <span>LIVE FEED</span>
+                    <h2>INCOMING <em>MISSIONS</em></h2>
+                </div>
+
+                <strong id="totalOrders">
+                    0 TOTAL
+                </strong>
+
+            </div>
+
+            <div id="ordersList" class="orders-list">
+
+                <div class="no-orders">
+                    NO TRANSMISSIONS RECEIVED
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- ORBIT GRAPH -->
+
+        <div class="panel orbit-panel">
+
+            <div class="panel-header">
+
+                <div>
+                    <span>ORBITAL ACTIVITY</span>
+                    <h2>DAILY <em>FLOW</em></h2>
+                </div>
+
+            </div>
+
+            <div class="orbit-chart">
+
+                <div class="chart-orbit orbit-chart-one"></div>
+                <div class="chart-orbit orbit-chart-two"></div>
+
+                <div class="chart-core">
+                    <span>REVENUE</span>
+                    <strong id="chartRevenue">₹0</strong>
+                    <small>TODAY</small>
+                </div>
+
+                <div class="chart-dot dot-one"></div>
+                <div class="chart-dot dot-two"></div>
+                <div class="chart-dot dot-three"></div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- SECOND ROW -->
+
+    <section class="bottom-grid">
+
+        <div class="panel">
+
+            <div class="panel-header">
+
+                <div>
+                    <span>ORDER STATUS</span>
+                    <h2>MISSION <em>FLOW</em></h2>
+                </div>
+
+            </div>
+
+            <div class="mission-flow">
+
+                <div>
+                    <b id="newCount">0</b>
+                    <span>RECEIVED</span>
+                </div>
+
+                <div>
+                    <b id="preparingCount">0</b>
+                    <span>BREWING</span>
+                </div>
+
+                <div>
+                    <b id="completedCount">0</b>
+                    <span>COMPLETED</span>
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="panel">
+
+            <div class="panel-header">
+
+                <div>
+                    <span>QUICK INFO</span>
+                    <h2>ORBIT <em>STATUS</em></h2>
+                </div>
+
+            </div>
+
+            <div class="system-list">
+
+                <div>
+                    <span>COFFEE SYSTEM</span>
+                    <b>ONLINE</b>
+                </div>
+
+                <div>
+                    <span>KITCHEN</span>
+                    <b>ONLINE</b>
+                </div>
+
+                <div>
+                    <span>ORDERS</span>
+                    <b>ACTIVE</b>
+                </div>
+
+                <div>
+                    <span>DATABASE</span>
+                    <b>LOCAL</b>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+</main>
+
+<script src="owner.js"></script>
+
+</body>
+</html>

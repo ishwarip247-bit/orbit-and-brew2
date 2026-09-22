@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Mission Control — ORBIT & BREW</title>
+
+    <link rel="stylesheet" href="owner.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Orbitron:wght@400;500;600;700;800&display=swap"
+          rel="stylesheet">
+
+</head>
+
+<body class="login-page">
+
+<div class="login-stars"></div>
+
+<div class="login-orbit orbit-a"></div>
+<div class="login-orbit orbit-b"></div>
+
+<main class="login-card">
+
+    <div class="login-symbol">
+        ✦
+    </div>
+
+    <span class="system-code">
+        ORB / MISSION CONTROL
+    </span>
+
+    <h1>
+        OWNER<br>
+        <em>ACCESS</em>
+    </h1>
+
+    <p>
+        Authorized personnel only.
+        Enter your credentials to access the ORBIT & BREW control system.
+    </p>
+
+    <form id="loginForm">
+
+        <label>
+            COMMANDER ID
+        </label>
+
+        <input
+            type="text"
+            id="username"
+            placeholder="Enter ID"
+            required
+        >
+
+        <label>
+            ACCESS CODE
+        </label>
+
+        <input
+            type="password"
+            id="password"
+            placeholder="Enter access code"
+            required
+        >
+
+        <button type="submit">
+            ENTER MISSION CONTROL ↗
+        </button>
+
+        <div id="loginError"></div>
+
+    </form>
+
+    <a href="../index.html" class="return-link">
+        ← RETURN TO EARTH
+    </a>
+
+</main>
+
+<script>
+
+document
+.getElementById("loginForm")
+.addEventListener("submit", function(e) {
+
+    e.preventDefault();
+
+    const username =
+        document.getElementById("username").value;
+
+    const password =
+        document.getElementById("password").value;
+
+    if (
+        username === "admin" &&
+        password === "cafe123"
+    ) {
+
+        sessionStorage.setItem(
+            "orbitOwnerAuth",
+            "true"
+        );
+
+        window.location.href =
+            "dashboard.html";
+
+    } else {
+
+        document.getElementById("loginError")
+        .textContent =
+            "ACCESS DENIED — INVALID CREDENTIALS";
+
+    }
+
+});
+
+</script>
+
+</body>
+</html>
