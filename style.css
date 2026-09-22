@@ -2311,3 +2311,44 @@ footer {
         overflow-y: auto !important;
     }
 }
+@media (max-width: 768px) {
+
+    .menu-overlay .cart {
+        display: flex !important;
+        flex-direction: column !important;
+        position: fixed !important;
+        left: 10px !important;
+        right: 10px !important;
+        bottom: 10px !important;
+        width: auto !important;
+        max-height: 70vh !important;
+        z-index: 9999 !important;
+        overflow: hidden !important;
+    }
+
+    .menu-overlay .cart-items {
+        flex: 1 !important;
+        overflow-y: auto !important;
+        min-height: 80px !important;
+    }
+
+    .menu-overlay .cart-bottom {
+        display: flex !important;
+        flex-shrink: 0 !important;
+        position: relative !important;
+        width: 100% !important;
+        z-index: 10000 !important;
+        visibility: visible !important;
+        opacity: 1 !important;
+    }
+
+    .menu-overlay #checkoutBtn {
+        display: block !important;
+        visibility: visible !important;
+        opacity: 1 !important;
+        width: 100% !important;
+        min-height: 50px !important;
+        position: relative !important;
+        z-index: 10001 !important;
+    }
+}
